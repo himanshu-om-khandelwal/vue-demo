@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="style.css" rel="stylesheet"></link>
+</head>
+<body>
+    <div id="app">
+        <flex-container></flex-container>
+        <!-- <div class="flex-container">
+            <div class="row">
+                <a :href="image_href" target="_blank"><img :src="image" :alt="image_alt" :class="[inStock ? '' : out-of-stock-img]"/></a>
+            </div>
+            <div class="row">
+                <div>
+                    <h1>{{ product }}</h1>
+                     <p>I love {{ product }}</p> 
+                </div>
+                <div class="inventory">
+                    <p v-if="inStock">In stock</p>
+                     <p v-else-if="inventory<=10 && inventory>0">Almost sold out...</p> 
+                    <p v-else>Out of stock</p>
+                </div>
+                <p v-if="onSale">{{title}}</p>
+                <div class="size">
+                    <ul>
+                        <li v-for="size in sizes" style="list-style: none;">{{size}}</li>
+                    </ul>
+                </div>
+                <div class="variants">
+                    <div v-for="(variant,index) in variants" @click="updateVarient(index)" class="circle-color" :style="{'background-color': variant.color}"></div>
+                </div>
+                <button 
+                    @click="addToCart" 
+                    :disabled="!inStock"
+                    :class="[inStock ? addToCartButtonStyles : disabledButton]"
+                    >
+                    Add To Cart
+                </button>
+            </div>
+            <div class="row right-sec">
+                <p class="cart-count">Cart ({{cart}})</p>
+            </div>
+        </div> -->
+    </div>
+    <script src="main.js"></script>
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+    <script src="./components/flexContainer.js"></script>
+</body>
+</html>
